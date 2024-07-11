@@ -1,0 +1,87 @@
+.mainContainer {
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+  }
+  
+  .leftContainer, .rightContainer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .leftContainer {
+    background-color: lightblue;
+  }
+  
+  .rightContainer {
+    background-color: rgb(223, 246, 242);
+  }
+  
+
+
+  .flipCard {
+    background-color: transparent;
+    width: 80%;
+    height: 300px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+
+  }
+  
+  .flipCardInner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flipCard:hover .flipCardInner {
+    transform: rotateY(180deg);
+  }
+  
+  .flipCardFront, .flipCardBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .image {
+    max-width: 100%;
+    height: 50vh;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgb(25, 25, 25);
+  }
+  
+  .flipCardFront {
+    background-color: #bbb;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgb(25, 25, 25);
+  }
+  
+  .flipCardBack {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgb(25, 25, 25);
+  }
+  
+  
+  @media (max-width: 768px) {
+    .mainContainer {
+      flex-direction: column;
+    }
+  
+    .image {
+      height: auto;
+    }
+  }
+  
+

@@ -1,0 +1,5 @@
+npx create-react-app .
+npm i react-router-dom
+npm install react-icons
+npm install bootstrap 
+npm install bootstrap react-bootstrap 
